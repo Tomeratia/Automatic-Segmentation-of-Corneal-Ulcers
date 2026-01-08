@@ -15,7 +15,7 @@ repo/
 |
 |-- notebooks/
 |   |-- EDA.ipynb          # dataset validation + visuals
-|   |-- training.ipynb     # training + evaluation + plots
+|   |-- training_and_evaluation.ipynb     # training + evaluation + plots
 |
 |-- src
 |   |-- build_dataset_index.py  - builds dataset index and data splits
