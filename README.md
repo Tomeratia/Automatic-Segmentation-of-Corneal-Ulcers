@@ -26,8 +26,8 @@ repo/
 
 ## How to run (Colab)
 1) Mount Google Drive and `cd` into the project folder.
-2) Ensure `data/outputs/dataset_index.csv` exists.
-3) Run `notebooks/training.ipynb` to train and compare all 3 experiments.
+2) Ensure `data/dataset_index.csv` exists.
+3) Run `notebooks/training_and_evaluation.ipynb` to train and compare all 3 experiments.
 
 ## Test results
 | Method | Test Dice | Test IoU |
