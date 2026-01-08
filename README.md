@@ -10,18 +10,33 @@ Project includes three experiments:
 ```
 repo/
 |-- data/
-|   |-- rawImages/         # input images (jpg/png)
-|   |-- ulcerLabels/       # ulcer masks (png)
-|   |-- corneaLabels/      # cornea masks (png)
+|   |-- dataset_url   - link to download the dataset
 |   |-- outputs/
+|       |-- A_scratch_noROI_best.pt
+|       |-- B_pretrained_noROI_best.pt
+|       |-- C_pretrained_ROI_best.pt
 |       |-- dataset_index.csv
-|       |-- *.pt           # saved checkpoints
-|
+|       |-- train_ids.txt
+|       |-- val_ids.txt
+|       |-- test_ids.txt
+
+|   |-- outputs/
+|       |-- A_scratch_noROI_best.pt        - best model trained from scratch
+|       |-- B_pretrained_noROI_best.pt     - best pretrained model (no ROI)
+|       |-- C_pretrained_ROI_best.pt       - best pretrained model with ROI
+|       |
+|       |-- dataset_index.csv              - dataset split index
+|       |-- train_ids.txt                  - training image IDs
+|       |-- val_ids.txt                    - validation image IDs
+|       |-- test_ids.txt                   - test image IDs
+
 |-- notebooks/
 |   |-- EDA.ipynb          # dataset validation + visuals
 |   |-- training.ipynb     # training + evaluation + plots
 |
-|-- src/                   # optional scripts (split/index creation)
+|-- src
+|   |-- build_dataset_index.py  - builds dataset index and data splits
+|        
 |-- README.md
 
 ```
