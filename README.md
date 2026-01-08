@@ -11,12 +11,8 @@ Project includes three experiments:
 repo/
 |-- data/
 |   |-- dataset_url   - link to download the dataset
-|   |-- outputs/
-|       |-- dataset_index.csv              - dataset split index
-|       |-- train_ids.txt                  - training image IDs
-|       |-- val_ids.txt                    - validation image IDs
-|       |-- test_ids.txt                   - test image IDs
-
+|   |-- dataset_index.csv    - dataset split index
+|
 |-- notebooks/
 |   |-- EDA.ipynb          # dataset validation + visuals
 |   |-- training.ipynb     # training + evaluation + plots
