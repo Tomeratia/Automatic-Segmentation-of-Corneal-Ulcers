@@ -6,10 +6,17 @@ Segmentation of corneal ulcers using a U-Net style decoder with a ResNet34 encod
 Corneal ulcers are a serious ophthalmic condition that can lead to vision loss if not diagnosed and monitored accurately. Manual annotation of ulcer regions is time-consuming and requires expert clinicians. Automatic segmentation aims to assist clinical workflows by providing fast, consistent, and objective localization of ulcer regions in fluorescein-stained eye images.  
 This project explores how transfer learning and anatomical priors (cornea-based ROI masking) can improve segmentation accuracy compared to training from scratch.
 
+
 Project includes three experiments:
 1) Train from scratch (no ROI)
 2) Pretrained encoder (no ROI)
 3) Pretrained + ROI (mask everything outside the cornea using corneaLabels)
+
+
+## Pipeline
+
+<img src="assets/pipeline.PNG" alt="Pipeline overview" width="800">
+
 
 ## Repo structure
 ```
