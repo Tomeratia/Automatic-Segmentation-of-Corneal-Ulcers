@@ -1,6 +1,11 @@
 # Automatic Segmentation of Corneal Ulcers (SUSTech-SYSU)
 
 Segmentation of corneal ulcers using a U-Net style decoder with a ResNet34 encoder.
+
+## Background
+Corneal ulcers are a serious ophthalmic condition that can lead to vision loss if not diagnosed and monitored accurately. Manual annotation of ulcer regions is time-consuming and requires expert clinicians. Automatic segmentation aims to assist clinical workflows by providing fast, consistent, and objective localization of ulcer regions in fluorescein-stained eye images.  
+This project explores how transfer learning and anatomical priors (cornea-based ROI masking) can improve segmentation accuracy compared to training from scratch.
+
 Project includes three experiments:
 1) Train from scratch (no ROI)
 2) Pretrained encoder (no ROI)
@@ -11,15 +16,11 @@ Project includes three experiments:
 repo/
 |-- data/
 |   |-- dataset_url   - link to download the dataset
-|   |-- outputs/
-|       |-- dataset_index.csv              - dataset split index
-|       |-- train_ids.txt                  - training image IDs
-|       |-- val_ids.txt                    - validation image IDs
-|       |-- test_ids.txt                   - test image IDs
-
+|   |-- dataset_index.csv    - dataset split index
+|
 |-- notebooks/
 |   |-- EDA.ipynb          # dataset validation + visuals
-|   |-- training.ipynb     # training + evaluation + plots
+|   |-- training_and_evaluation.ipynb     # training + evaluation + plots
 |
 |-- src
 |   |-- build_dataset_index.py  - builds dataset index and data splits
@@ -30,8 +31,8 @@ repo/
 
 ## How to run (Colab)
 1) Mount Google Drive and `cd` into the project folder.
-2) Ensure `data/outputs/dataset_index.csv` exists.
-3) Run `notebooks/training.ipynb` to train and compare all 3 experiments.
+2) Ensure `data/dataset_index.csv` exists.
+3) Run `notebooks/training_and_evaluation.ipynb` to train and compare all 3 experiments.
 
 ## Test results
 | Method | Test Dice | Test IoU |
