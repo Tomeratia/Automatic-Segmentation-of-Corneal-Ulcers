@@ -224,30 +224,34 @@ The Pretrained+ROI model reached val_dice > 0.77 by epoch 6, while the Pretraine
 ##  Repository Structure
 
 ```
- Corneal-Ulcer-Segmentation/
+CornealSeg/
 ├──  data/
-│   ├──  dataset_url              # Link to download the dataset
-│   ├──  dataset_index.csv        # Dataset split index
-│   ├──  rawImages/               # Original images
-│   ├──  corneaLabels/            # Cornea masks
-│   ├──  ulcerLabels/             # Ulcer masks (ground truth)
-│   ├──  corneaOverlay/           # Cornea visualizations
-│   └──  ulcerOverlay/            # Ulcer visualizations
+│   ├──  dataset_url.md                  # Link to download the dataset
+│   ├──  outputs/
+│   │   └──  dataset_index.csv           # Dataset split index (train/val/test)
+│   ├──  rawImages/                      # Original images (download separately)
+│   ├──  corneaLabels/                   # Cornea masks (download separately)
+│   ├──  ulcerLabels/                    # Ulcer masks - ground truth (download separately)
+│   ├──  corneaOverlay/                  # Cornea visualizations (download separately)
+│   └──  ulcerOverlay/                   # Ulcer visualizations (download separately)
 │
 ├──  notebooks/
-│   ├──  EDA.ipynb                # Dataset validation + visuals
-│   └──  training_and_evaluation.ipynb  # Training + evaluation + plots
+│   ├──  EDA_ulcer_segmentation.ipynb    # Dataset validation + visuals
+│   └──  training_and_evaluation.ipynb   # Training + evaluation + plots
 │
 ├──  src/
-│   └──  build_dataset_index.py   # Builds dataset index and splits
+│   └──  build_dataset_index.py          # Builds dataset index and splits
 │
 ├──  assets/
-│   ├──  pipeline.PNG             # Pipeline visualization
-│   ├──  sample_image.jpg         # Example dataset image
-│   └──  sample_mask.png          # Example ulcer mask
+│   ├──  pipeline.PNG                    # Pipeline visualization
+│   ├──  sample_image.jpg                # Example dataset image
+│   ├──  sample_overlay.jpg              # Example with overlay
+│   └──  sample_mask.png                 # Example ulcer mask
 │
 └──  README.md
 ```
+
+> **Note**: Image folders (`rawImages/`, `corneaLabels/`, etc.) are not included in this repo due to size. Download from: https://doi.org/10.6084/m9.figshare.10247501
 
 ---
 
